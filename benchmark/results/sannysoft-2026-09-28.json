@@ -1,0 +1,216 @@
+{
+  "target": "https://bot.sannysoft.com",
+  "node": "v22.18.0",
+  "default": {
+    "passed": 14,
+    "failed": 5,
+    "rows": [
+      {
+        "name": "PHANTOM_UA",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_PROPERTIES",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_ETSL",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_LANGUAGE",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_WEBSOCKET",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "MQ_SCREEN",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_OVERFLOW",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_WINDOW_HEIGHT",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "HEADCHR_UA",
+        "class": "failed",
+        "text": "FAIL"
+      },
+      {
+        "name": "HEADCHR_CHROME_OBJ",
+        "class": "failed",
+        "text": "FAIL"
+      },
+      {
+        "name": "HEADCHR_PERMISSIONS",
+        "class": "failed",
+        "text": "FAIL"
+      },
+      {
+        "name": "HEADCHR_PLUGINS",
+        "class": "warn",
+        "text": "WARN"
+      },
+      {
+        "name": "HEADCHR_IFRAME",
+        "class": "failed",
+        "text": "FAIL"
+      },
+      {
+        "name": "CHR_DEBUG_TOOLS",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "SELENIUM_DRIVER",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "CHR_BATTERY",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "CHR_MEMORY",
+        "class": "failed",
+        "text": "FAIL"
+      },
+      {
+        "name": "TRANSPARENT_PIXEL",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "SEQUENTUM",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "VIDEO_CODECS",
+        "class": "passed",
+        "text": "ok"
+      }
+    ]
+  },
+  "stealth": {
+    "passed": 20,
+    "failed": 0,
+    "rows": [
+      {
+        "name": "PHANTOM_UA",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_PROPERTIES",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_ETSL",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_LANGUAGE",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_WEBSOCKET",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "MQ_SCREEN",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_OVERFLOW",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "PHANTOM_WINDOW_HEIGHT",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "HEADCHR_UA",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "HEADCHR_CHROME_OBJ",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "HEADCHR_PERMISSIONS",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "HEADCHR_PLUGINS",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "HEADCHR_IFRAME",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "CHR_DEBUG_TOOLS",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "SELENIUM_DRIVER",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "CHR_BATTERY",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "CHR_MEMORY",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "TRANSPARENT_PIXEL",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "SEQUENTUM",
+        "class": "passed",
+        "text": "ok"
+      },
+      {
+        "name": "VIDEO_CODECS",
+        "class": "passed",
+        "text": "ok"
+      }
+    ]
+  }
+}

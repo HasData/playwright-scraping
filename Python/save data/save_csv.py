@@ -6,8 +6,8 @@ import csv
 with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page()
-    page.goto("https://example.com")
-    headers = page.locator("h2").all_inner_texts()
+    page.goto("https://quotes.toscrape.com")
+    headers = page.locator(".quote .text").all_inner_texts()
     with open("headers.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["Header"])

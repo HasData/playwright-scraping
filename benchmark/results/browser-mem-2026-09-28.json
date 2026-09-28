@@ -1,0 +1,70 @@
+{
+  "iterations": 5,
+  "node": "v22.18.0",
+  "median": {
+    "launch_ms": {
+      "playwright": 245,
+      "puppeteer": 789
+    },
+    "rss_mb": {
+      "playwright": 165,
+      "puppeteer": 424
+    }
+  },
+  "runs": {
+    "playwright": [
+      {
+        "launchTime": 304.95399999999995,
+        "rss": 164.171875,
+        "pidCount": 4
+      },
+      {
+        "launchTime": 252.60219999999936,
+        "rss": 168.2421875,
+        "pidCount": 4
+      },
+      {
+        "launchTime": 245.0640000000003,
+        "rss": 165.4609375,
+        "pidCount": 4
+      },
+      {
+        "launchTime": 237.6234000000004,
+        "rss": 164.33984375,
+        "pidCount": 4
+      },
+      {
+        "launchTime": 242.60970000000088,
+        "rss": 165.41796875,
+        "pidCount": 4
+      }
+    ],
+    "puppeteer": [
+      {
+        "launchTime": 2155.6222000000016,
+        "rss": 409.125,
+        "pidCount": 9
+      },
+      {
+        "launchTime": 788.6269000000029,
+        "rss": 423.8515625,
+        "pidCount": 10
+      },
+      {
+        "launchTime": 735.6663999999946,
+        "rss": 425.75390625,
+        "pidCount": 10
+      },
+      {
+        "launchTime": 744.4861999999994,
+        "rss": 423.79296875,
+        "pidCount": 10
+      },
+      {
+        "launchTime": 988.8516000000018,
+        "rss": 387.85546875,
+        "pidCount": 9
+      }
+    ]
+  }
+}

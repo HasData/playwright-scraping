@@ -1,12 +1,10 @@
-![Python](https://img.shields.io/badge/python-3.7+-blue)
-![Node.js](https://img.shields.io/badge/node.js-18+-green)
-![Playwright](https://img.shields.io/badge/playwright-1.43.0-blueviolet)
-
-
 # Playwright Web Scraping Examples (Python & Node.js)
-[![HasData_bannner](banner.png)](https://hasdata.com/)
 
-This repository contains practical web scraping examples using **[Playwright](https://playwright.dev/)** in both **Python** and **Node.js**. It’s organized to help you learn everything — from basics to advanced techniques.
+![Python 3.7 or newer badge](https://img.shields.io/badge/python-3.7+-blue) ![Node.js 18 or newer badge](https://img.shields.io/badge/node.js-18+-green) ![Playwright version badge](https://img.shields.io/badge/playwright-1.43.0-blueviolet)
+
+[![HasData, the web scraping API some examples call](banner.png)](https://hasdata.com/)
+
+This repository contains practical web scraping examples using **[Playwright](https://playwright.dev/)** in both **Python** and **Node.js**. It’s organized to take you from the basics to the advanced techniques.
 
 
 ## Table of Contents
@@ -27,20 +25,31 @@ This repository contains practical web scraping examples using **[Playwright](ht
 
 **Python 3.7+ or Node.js 18+**
 
-Playwright installed:
+Install Playwright for the language you use.
 
 ### Python
+
+The second command downloads the browser binaries.
+
 ```
 pip install playwright
 playwright install
 ```
+
+Both lines matter, the second one fetches the browsers.
+
 ### Node.js
+
+The package installs first, browsers arrive with `npx playwright install`.
+
 ```
 npm install playwright
 ```
 
+After that the example scripts run with plain `node` and `python`.
+
 ## Project Structure
-The project is organized into two main folders: one for Python scripts and one for Node.js. Both have identical folder structures and contain the same functionality, but in different languages (Python for python/ and Node.js for node/).
+The project is organized into two main folders, one for Python scripts and one for Node.js. Both have identical folder structures and contain the same functionality, but in different languages (Python for python/ and Node.js for node/).
 ```
 .
 ├── Python/
@@ -155,6 +164,8 @@ The table below lists the main commands for that.
 | Select by role | `page.get_by_role("button")` | `page.getByRole('button')` |
 | Select by text | `page.get_by_text("Login")` | `page.getByText('Login')` |
 
+Role and text selectors survive layout changes better than raw CSS.
+
 ##  Interactions
 
 This section covers scripts that simulate user actions like clicking buttons, filling out forms, selecting from dropdowns, hovering, and handling pagination or infinite scrolling.
@@ -169,23 +180,23 @@ The table below lists the main commands for that.
 | Pagination | `await page.click("text=Next")` | `await page.click('text=Next')` |
 | Infinite scroll | `await page.evaluate("window.scrollBy(...)")` | `await page.evaluate(() => window.scrollBy(...))` |
 
-Avoid hardcoded delays — they’re unreliable and make your scraper brittle.
+Hardcoded delays are unreliable and make your scraper brittle.
 
 Don’t do this:
-#### Python
+**Python**
 ```python
 await asyncio.sleep(5)
 ```
-#### Node.js
+**Node.js**
 ```js
 await new Promise(r => setTimeout(r, 5000));
 ```
 Do this instead:
-#### Python
+**Python**
 ```python
 await page.wait_for_selector(".product-thumb")
 ```
-#### Node.js
+**Node.js**
 ```js
 await page.waitForSelector(".product-thumb");
 ```
@@ -206,6 +217,8 @@ The table below lists the main commands for that.
 | Screenshot element | `await locator.screenshot(path="element.png")` | `await locator.screenshot({ path: 'element.png' })` |
 | Save PDF | `await page.pdf(path="output.pdf")` | `await page.pdf({ path: 'output.pdf' })` |
 
+PDF export works only in headless Chromium.
+
 ## Auth
 
 This section provides scripts for handling basic authentication, managing cookies, and reusing them across sessions.
@@ -216,6 +229,8 @@ The table below lists the main commands for that.
 | Basic auth | `context = browser.new_context(http_credentials={...})` | `browser.newContext({ httpCredentials: {...} })` |
 | Save cookies | `context.cookies()` → save to file | `context.cookies()` → save to file |
 | Load cookies | `context.add_cookies(cookies)` | `context.addCookies(cookies)` |
+
+A saved cookie jar turns a login flow into a one-time cost.
 
 ## Browser
 
@@ -231,7 +246,7 @@ The table below lists the main commands for that.
 
 
 If you want to check available devices:
-#### Python
+**Python**
 
 ```python
 print(p.devices.keys())
@@ -241,7 +256,7 @@ This will output something like:
 ```python
 dict_keys(['iPhone 12', 'Pixel 5', 'Galaxy S9+', ...])
 ```
-#### NodeJS
+**Node.js**
 
 ```js
 console.log(Object.keys(devices));
@@ -259,6 +274,8 @@ Example output:
 ]
 ```
 
+Device descriptors carry the user agent, viewport and touch flags together.
+
 ## Errors
 
 This section contains examples for retrying failed requests and handling timeouts or unexpected responses.
@@ -268,9 +285,11 @@ The table below lists the main commands for that.
 |------------|--------|---------|
 | Retry logic | `for i in range(retries): try/except` | `for (let i = 0; i < retries; i++) try/catch` |
 
+Back off between attempts, a second retry into the same block gets the same block.
+
 ## Debug
 
-This section provides tools for debugging: recording videos and traces, pausing scripts, and inspecting with console logs.
+This section provides the debugging tools. It records videos and traces, pauses scripts, and inspects console logs.
 The table below lists the main commands for that.
 
 | Description | Python | Node.js |
@@ -282,3 +301,24 @@ The table below lists the main commands for that.
 
 
 You can check out the full scripts in the project folder.
+
+## Benchmark
+
+The `benchmark/` folder holds the measurement scripts behind [our JavaScript scraping libraries comparison](https://hasdata.com/blog/best-javascript-web-scraping-libraries), with raw results in `benchmark/results/` dated by run day. The raw files carry the run day in their names, and the latest run used Node v22.18.0 with Playwright 1.61.0, Puppeteer 24.43.1, Cheerio 1.2.0 and jsdom 25.0.1:
+
+| Measurement | Script | Result |
+|---|---|---|
+| Parse and extract, 49 KB static page, median of 20 | `bench-parse.mjs` | Cheerio 9.7 ms and 27.6 MB heap, jsdom 57.2 ms and 81.9 MB |
+| Cold start and browser RSS, median of 5 | `bench-browser-mem.mjs` | Playwright 245 ms and 165 MB, Puppeteer 789 ms and 424 MB |
+| Detection rows on `bot.sannysoft.com` | `bench-sannysoft.mjs` | default Chromium fails 5 of 19, with the stealth plugin 0 of 20 |
+
+Each script prints the numbers and writes the raw JSON. Run them with `node --expose-gc bench-parse.mjs` (the flag makes heap deltas honest) and plain `node` for the other two.
+
+## Disclaimer
+
+The examples and benchmarks fetch publicly available pages. Whether and how such collection is appropriate depends on jurisdiction, the site, and the use, and nothing in this repository is legal advice. [Is Web Scraping Legal?](https://hasdata.com/blog/is-web-scraping-legal) covers how we think about the question.
+
+## More Resources
+
+- [Playwright Web Scraping](https://hasdata.com/blog/playwright-web-scraping), the tutorial these examples follow
+- [Best JavaScript Web Scraping Libraries](https://hasdata.com/blog/best-javascript-web-scraping-libraries), the comparison the benchmark feeds

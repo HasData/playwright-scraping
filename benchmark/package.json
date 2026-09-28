@@ -1,0 +1,14 @@
+{
+  "name": "best-js-libs-bench",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "crawlee": "^3.17.0",
+    "jsdom": "^25.0.1",
+    "playwright": "^1.60.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer": "^24.0.0",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

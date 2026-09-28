@@ -4,7 +4,7 @@ def run():
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
-        page.goto("https://example.com")
+        page.goto("https://quotes.toscrape.com")
         element = page.query_selector('//h1')
         print("XPath Selector:", element.inner_text())
         browser.close()
