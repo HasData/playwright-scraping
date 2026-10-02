@@ -2,7 +2,7 @@
 
 ![Python 3.7 or newer badge](https://img.shields.io/badge/python-3.7+-blue) ![Node.js 18 or newer badge](https://img.shields.io/badge/node.js-18+-green) ![Playwright version badge](https://img.shields.io/badge/playwright-1.43.0-blueviolet)
 
-[![HasData, the web scraping API some examples call](banner.png)](https://hasdata.com/)
+[![HasData, the web scraping API some examples call](banner.png)](https://hasdata.com/?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)
 
 This repository contains practical web scraping examples using **[Playwright](https://playwright.dev/)** in both **Python** and **Node.js**. It’s organized to take you from the basics to the advanced techniques.
 
@@ -138,17 +138,17 @@ This part of the project includes two ready-to-use scrapers implemented in both 
 
 If you want to learn how to build the similar scrapers step by step, check out the detailed guides:
 
-- [How to Scrape Amazon](https://hasdata.com/blog/scraping-amazon-product-data-using-python)  
-- [How to Scrape WooCommerce](https://hasdata.com/blog/woocommerce-scraping)
+- [How to Scrape Amazon](https://hasdata.com/blog/scraping-amazon-product-data-using-python?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)  
+- [How to Scrape WooCommerce](https://hasdata.com/blog/woocommerce-scraping?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)
 
 Alternatively, you can use the no-code scrapers and APIs to quickly extract structured data from Amazon:
 
-- [Amazon Search Results](https://hasdata.com/scrapers/amazon-search-results)  
-- [Amazon Product Info](https://hasdata.com/scrapers/amazon-product)  
-- [Amazon Reviews](https://hasdata.com/scrapers/amazon-reviews)  
-- [Amazon Bestsellers](https://hasdata.com/scrapers/amazon-bestsellers)  
-- [Amazon Customer FAQs](https://hasdata.com/scrapers/amazon-customer-faqs)  
-- [Amazon Price Tracker](https://hasdata.com/scrapers/amazon-price)
+- [Amazon Search Results](https://hasdata.com/scrapers/amazon-search-results?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)  
+- [Amazon Product Info](https://hasdata.com/scrapers/amazon-product?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)  
+- [Amazon Reviews](https://hasdata.com/scrapers/amazon-reviews?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)  
+- [Amazon Bestsellers](https://hasdata.com/scrapers/amazon-bestsellers?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)  
+- [Amazon Customer FAQs](https://hasdata.com/scrapers/amazon-customer-faqs?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)  
+- [Amazon Price Tracker](https://hasdata.com/scrapers/amazon-price?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme)
 
 
 ## Selectors
@@ -304,7 +304,7 @@ You can check out the full scripts in the project folder.
 
 ## Benchmark
 
-The `benchmark/` folder holds the measurement scripts behind [our JavaScript scraping libraries comparison](https://hasdata.com/blog/best-javascript-web-scraping-libraries), with raw results in `benchmark/results/` dated by run day. The raw files carry the run day in their names, and the latest run used Node v22.18.0 with Playwright 1.61.0, Puppeteer 24.43.1, Cheerio 1.2.0 and jsdom 25.0.1:
+The `benchmark/` folder holds the measurement scripts behind [our JavaScript scraping libraries comparison](https://hasdata.com/blog/best-javascript-web-scraping-libraries?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme), with raw results in `benchmark/results/` dated by run day. The raw files carry the run day in their names, and the latest run used Node v22.18.0 with Playwright 1.61.0, Puppeteer 24.43.1, Cheerio 1.2.0 and jsdom 25.0.1:
 
 | Measurement | Script | Result |
 |---|---|---|
@@ -316,9 +316,9 @@ Each script prints the numbers and writes the raw JSON. Run them with `node --ex
 
 ## Disclaimer
 
-The examples and benchmarks fetch publicly available pages. Whether and how such collection is appropriate depends on jurisdiction, the site, and the use, and nothing in this repository is legal advice. [Is Web Scraping Legal?](https://hasdata.com/blog/is-web-scraping-legal) covers how we think about the question.
+The examples and benchmarks fetch publicly available pages. Whether and how such collection is appropriate depends on jurisdiction, the site, and the use, and nothing in this repository is legal advice. [Is Web Scraping Legal?](https://hasdata.com/blog/is-web-scraping-legal?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme) covers how we think about the question.
 
 ## More Resources
 
-- [Playwright Web Scraping](https://hasdata.com/blog/playwright-web-scraping), the tutorial these examples follow
-- [Best JavaScript Web Scraping Libraries](https://hasdata.com/blog/best-javascript-web-scraping-libraries), the comparison the benchmark feeds
+- [Playwright Web Scraping](https://hasdata.com/blog/playwright-web-scraping?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme), the tutorial these examples follow
+- [Best JavaScript Web Scraping Libraries](https://hasdata.com/blog/best-javascript-web-scraping-libraries?utm_source=github&utm_medium=syndication&utm_campaign=scraping-playwright-and-python&utm_content=playwright-scraping-readme), the comparison the benchmark feeds
